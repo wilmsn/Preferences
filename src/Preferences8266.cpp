@@ -1,5 +1,6 @@
 
-#include "Preferences.h"
+#ifdef ESP8266
+#include "Preferences8266.h"
 
 //#define NVS_LOG
 
@@ -25,9 +26,9 @@
 #endif
 
 #if defined(NVS_USE_DCT)
-  #include "Preferences_impl_dct.h"
+  #include "Preferences8266_impl_dct.h"
 #else
-  #include "Preferences_impl_fs.h"
+  #include "Preferences8266_impl_fs.h"
 #endif
 
 Preferences::Preferences()
@@ -193,3 +194,4 @@ size_t Preferences::getString(const char* key, char* value, const size_t maxLen)
     return len;
 }
 
+#endif

@@ -1,6 +1,8 @@
 
-#ifndef _PREFERENCES_H_
-#define _PREFERENCES_H_
+#ifndef _PREFERENCES8266_H_
+#define _PREFERENCES8266_H_
+
+#ifdef ESP8266
 
 #if defined(PARTICLE)
 #  include "Particle.h"
@@ -8,7 +10,7 @@
 #  include "Arduino.h"
 #endif
 
-#include "Preferences_setup.h"
+#include "Preferences8266_setup.h"
 
 #include <math.h>
 
@@ -78,4 +80,5 @@ class Preferences
         size_t freeEntries();
 };
 
+#endif
 #endif

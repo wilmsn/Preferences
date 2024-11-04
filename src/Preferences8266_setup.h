@@ -1,13 +1,13 @@
 
-#ifndef _PREFERENCES_SETUP_H_
-#define _PREFERENCES_SETUP_H_
+#ifndef _PREFERENCES8266_SETUP_H_
+#define _PREFERENCES8266_SETUP_H_
 
 #if defined(NVS_USE_POSIX) || defined(NVS_USE_LITTLEFS) || defined(NVS_USE_SPIFFS) || defined(NVS_USE_WIFININA) || defined(NVS_USE_DCT)
   // OK, use it.
 #elif defined(NVS_USE_DUMMY)
   // OK, warn about it.
   #warning "Dummy implementation is used (won't store any values)"
-#elif defined(PARTICLE) && (PLATFORM_ID == PLATFORM_ARGON || PLATFORM_ID == PLATFORM_BORON || PLATFORM_ID == PLATFORM_XENON || PLATFORM_ID == PLATFORM_P2)
+#elif defined(PARTICLE) && (PLATFORM_ID == PLATFORM_ARGON || PLATFORM_ID == PLATFORM_BORON || PLATFORM_ID == PLATFORM_XENON)
   #define NVS_USE_POSIX
 #elif defined(PARTICLE) && (PLATFORM_ID == PLATFORM_BSOM || PLATFORM_ID == PLATFORM_B5SOM || PLATFORM_ID == PLATFORM_TRACKER)
   #define NVS_USE_POSIX
