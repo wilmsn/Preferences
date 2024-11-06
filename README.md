@@ -1,4 +1,5 @@
 # Preferences
+**Atention:** This is a modified version that i need for a project with ESP32 and ESP8266. The basic version will produce ERRORS. 
 
 [![Arduino Library Manager](https://img.shields.io/static/v1?label=Arduino&message=v2.1.0&logo=arduino&logoColor=white&color=blue)](https://www.ardu-badge.com/Preferences)
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/vshymanskyy/library/Preferences.svg)](https://registry.platformio.org/packages/libraries/vshymanskyy/Preferences) 
@@ -17,7 +18,7 @@ Available from: [`Arduino Library Manager`](https://www.arduino.cc/reference/en/
 ## How does it work?
 
 ```cpp
-#include <Preferences.h>
+#include <Preferences8266.h>
 Preferences prefs;
 
 void setup() {
